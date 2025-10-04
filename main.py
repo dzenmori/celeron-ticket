@@ -97,10 +97,10 @@ while True:
     # elif pilihan == "3":
     #     tampilkan_data()
     # elif pilihan == "4":
-        # print("Program selesai. Terima kasih 🙏")
+        # print("Program selesai. Terima kasih")
         # break
     else:
-        print("Pilihan tidak valid ❌")
+        print("Pilihan tidak valid")
 
 
 
