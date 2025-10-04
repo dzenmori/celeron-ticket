@@ -86,3 +86,25 @@ Total Harga     : {i[3]}
         total_pendapatan += i[3]
 
     print(f"=== TOTAL PENDAPATAN TRAVEL : Rp{total_pendapatan} ===")
+    while True:
+        print("""
+    === SISTEM PEMESANAN TIKET TRAVEL ===
+    1. Tambah Data Penumpang
+    2. Cari Data Penumpang
+    3. Tampilkan Semua Data + total Pendapatan
+    4. Keluar
+    """)
+        pilihan = input("Pilih menu (1-4): ")
+
+        if pilihan == "1":
+            tambah()
+        elif pilihan == "2":
+            cari_data()
+        elif pilihan == "3":
+            tampilkan_data()
+        elif pilihan == "4":
+            print("Program selesai. Terimakasih")
+            break
+        else:
+            print("Pilihan tidak valid")
+            
