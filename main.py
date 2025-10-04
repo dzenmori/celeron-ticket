@@ -58,19 +58,20 @@ Data penumpang ditemukan
 Nama            : {i[0]}    
 Kota Tujuan     : {i[1]}    
 Jumlah Tiket    : {i[2]}    
-Total Harga     : {i[3]}            
+Total Harga     : {i[3]}        
+========================    
 """)
             
             ketemu = True
             break
 
     if not ketemu:
-        print("Data tidak ketemu")
+        print("NAMA PENUMPANG TIDAK TERDAPAT DALAM DATA")
 
 def tampilkan_data():
     if not data:
         print("Belum ada data pemesanan!")
-        return
+        
     
     print("\n=== DAFTAR SEMUA PEMESANAN ===")
     total_pendapatan = 0
@@ -81,6 +82,7 @@ Nama            : {i[0]}
 Kota Tujuan     : {i[1]}    
 Jumlah Tiket    : {i[2]}    
 Total Harga     : {i[3]}
+========================
 """)
         total_pendapatan += i[3] 
 
