@@ -68,43 +68,21 @@ Total Harga     : {i[3]}
         if not ketemu:
             print("Data tidak ketemu")
 
+def tampilkan_data():
+    if not data:
+        print("Belum ada data pemesanan!")
+        return
+    
+    print("\n=== DAFTAR SEMUA PEMESANAN ===")
+    total_pendapatan = 0
 
+    for i in data:
+        print(f"""
+Nama            : {i[0]}    
+Kota Tujuan     : {i[1]}    
+Jumlah Tiket    : {i[2]}    
+Total Harga     : {i[3]}
+""") 
+        total_pendapatan += i[3]
 
-
-
-
-
-
-
-
-
-
-
-while True:
-    print("""
-=== SISTEM PEMESANAN TIKET TRAVEL ===
-1. Tambah Data Penumpang
-2. Cari Data Penumpang
-3. Tampilkan Semua Data + Total Pendapatan
-4. Keluar
-""")
-    pilihan = input("Pilih menu (1-4): ")
-
-    if pilihan == "1":
-        tambah()
-    elif pilihan == "2":
-        cari_data()
-    # elif pilihan == "3":
-    #     tampilkan_data()
-    # elif pilihan == "4":
-        # print("Program selesai. Terima kasih")
-        # break
-    else:
-        print("Pilihan tidak valid")
-
-
-
-
-
-
-
+    print(f"=== TOTAL PENDAPATAN TRAVEL : Rp{total_pendapatan} ===")
