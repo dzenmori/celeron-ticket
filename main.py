@@ -1,12 +1,12 @@
 tiket = {
-    "1" : 200000,
-    "2" : 150000,
-    "3" : 180000,
-    "4" : 200000,
-    "5" : 100000
+    "jakarta" : 200000, 
+    "bandar Lampung" : 150000,
+    "bandung" : 180000,
+    "yogyakarta" : 200000,
+    "palembang" : 100000
 }
 
-# tiket = [20000, 150000, 180000, 200000, 100000]
+
 
 data = []
 
@@ -14,21 +14,36 @@ def tambah():
     nama = input('Masukan nama pelanggan : ')
     print("""
     Kota Tujuan tersedia :
-    1.Jakarta
-    2.Bandar Lampung
-    3.Bandung
-    4.Yogyakarta
-    5.Palembang
+    Jakarta : 200000
+    Bandar Lampung : 150000
+    Bandung : 180000
+    Yogyakarta : 200000
+    Palembang : 100000
 """)
 
-    Tujuan = input('pilih no kota tujuan :')
+    tujuan = input('pilih  kota tujuan :').lower()
 
-    if Tujuan in tiket:
+    if tujuan in tiket:
         jumlah = int(input('Masukan Jumlah tiket :'))
-        total = tiket[Tujuan] * jumlah
+        total = tiket[tujuan] * jumlah
         print(f"Total harga tiket : {total}")
+        print(f"""
+    =====E CELERON TICKET=====
+          
+    Nama pemesan tiket : {nama}
+    Kota tujuan yang dipesan : {tujuan} 
+    Jumlah tiket yang dipesan : {jumlah}
+    Total harga bayar : {total}
 
+         SIMPAN RESI INI
+    UNTUK BUKTI TRANSAKSI YANG SAH
+    """)
+    
     else:
         print('Kota tujuan tidak tersedia')
+
 tambah()
+
+
+
 
